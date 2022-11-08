@@ -53,20 +53,20 @@ class Megacyte(Mineral):
     ore_dict= {"Bistot": 0.24, "Arkonor": 0.31}
 
 
-class Morphote(Mineral):
+class Morphite(Mineral):
     ore_dict= {"Mercoxit": 0.18}
 
-reproc = Tritanium.ore_dict_print(Tritanium.ore_dict)
-reproc_v2 = Tritanium.rich_dict_print(Tritanium.ore_dict)
-reproc_v3 = Tritanium.compressed_dict_print(Tritanium.ore_dict)
+#reproc = Tritanium.ore_dict_print(Tritanium.ore_dict)
+#reproc_v2 = Tritanium.rich_dict_print(Tritanium.ore_dict)
+#reproc_v3 = Tritanium.compressed_dict_print(Tritanium.ore_dict)
 
-reproc_s = Pyerite.ore_dict_print(Pyerite.ore_dict)
-reproc_s2 = Pyerite.rich_dict_print(Pyerite.ore_dict)
-reproc_s3 = Pyerite.compressed_dict_print(Pyerite.ore_dict)
+#reproc_s = Pyerite.ore_dict_print(Pyerite.ore_dict)
+#reproc_s2 = Pyerite.rich_dict_print(Pyerite.ore_dict)
+#reproc_s3 = Pyerite.compressed_dict_print(Pyerite.ore_dict)
 
-print(reproc)
-print(reproc_v2)
-print(reproc_v3)
-print(reproc_s)
-print(reproc_s2)
-print(reproc_s3)
+#print(reproc)
+#print(reproc_v2)
+#print(reproc_v3)
+#print(reproc_s)
+#print(reproc_s2)
+#print(reproc_s3)
