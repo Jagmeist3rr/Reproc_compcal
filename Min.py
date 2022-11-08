@@ -1,6 +1,6 @@
 #!/usr/bin/env python 3
 #Skill level page
-import Min_test
+import Mineral_classes
 
 class Skill_Level():
     player_skill_level = 0
@@ -25,20 +25,27 @@ class Ore_Processing(Skill_Level):
         updated_ore_processing_levels = {}
         for dict_list in Ore_Processing.all_ore_processing_levels:
             for key, value in dict_list.items():
-                dict_list[key] = (value * Ore_Processing.percent_ore_proficiency)/100
-                updated_ore_processing_levels = dict_list
+                updated_ore_processing_levels[key] = (value * Ore_Processing.percent_ore_proficiency)/100
         return updated_ore_processing_levels
 
+    def Ore_stats():
+        Ore_Processing.calculate_level_percentages()
+        if Skill_Level.player_skill_level <= 5:
+            for dict_list in Ore_Processing.all_ore_processing_levels:
+                for key, value in dict_list.items():
 
-    def obtain_player_ore_processing_level():
-        for dict_list in Ore_Processing.all_ore_processing_levels:
-            for key in dict_list:
-                if Skill_Level.player_skill_level == key:
-                    print("Finally")
 
-Ore_Processing.calculate_level_percentages()
-Ore_Processing.obtain_player_ore_processing_level()
-#main()
+    #def obtain_player_ore_processing_level():
+    #    #Ore_Processing.obtain_player_ore_processing_level()
+    #    #for dict_list in Ore_Processing.all_ore_processing_levels:
+    #    for dict_list in Ore_Processing.all_ore_processing_levels:
+    #        for key in dict_list:
+    #            if Skill_Level.player_skill_level == key:
+    #                print("Finally")
+
+#Ore_Processing.calculate_level_percentages()
+#Ore_Processing.obtain_player_ore_processing_level()
+
 
 
 
