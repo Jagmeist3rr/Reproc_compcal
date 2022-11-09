@@ -8,11 +8,11 @@ class Ores():
     ore_name = ""
     mineral_list = {}
     mineral_name = ""
+
     def retrieve_mineral_info(ore_name, ore_dict):
         for dict_list in Mineral_classes.all_ores_dict_list:
             for key, value in dict_list.items():
                 if ore_name.lower() == key.lower():
-                    #print(ore_name, value, dict_list)
                     if ore_name in dict_list:
                         mineral_name = list(dict_list)[-1]
                         ore_dict[mineral_name] = value
@@ -109,4 +109,4 @@ total_ore_dict = [Veldspar.retrieve_mineral_info(Veldspar.ore_name, Veldspar.ore
                   Arkonor.retrieve_mineral_info(Arkonor.ore_name, Arkonor.ore_dict), Mercoxit.retrieve_mineral_info(Mercoxit.ore_name, Mercoxit.ore_dict)]
 
 
-print(total_ore_dict)
+#print(total_ore_dict)

@@ -1,6 +1,8 @@
 #!/usr/bin/env python 3
-#Skill level page
+# Skill level page
 import Mineral_classes
+import Ore_classes
+
 
 class Skill_Level():
     player_skill_level = 0
@@ -8,13 +10,14 @@ class Skill_Level():
     advanced_levels = {}
     expert_levels = {}
 
-    def Get_Player_Skill_Level():
+    def get_player_skill_level():
         while True:
             Skill_Level.player_skill_level = int(input("What is your total Ore Processing Skill level: "))
             if 0 < Skill_Level.player_skill_level < 16:
                 break
             print("Please enter a number from 1-15: ")
         return Skill_Level.player_skill_level
+
 
 class Ore_Processing(Skill_Level):
     Skill_Level.Get_Player_Skill_Level()
@@ -46,8 +49,9 @@ class Ore_Processing(Skill_Level):
         else:
             print("Error")
 
-reproc3 = Ore_Processing.ore_stats()
-print(reproc3)
+
+#reproc3 = Ore_Processing.ore_stats()
+#print(reproc3)
 
 
 
