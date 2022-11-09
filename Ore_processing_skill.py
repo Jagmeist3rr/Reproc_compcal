@@ -1,7 +1,5 @@
 #!/usr/bin/env python 3
 # Skill level page
-import Mineral_classes
-import Ore_classes
 
 
 class Skill_Level():
@@ -20,7 +18,7 @@ class Skill_Level():
 
 
 class Ore_Processing(Skill_Level):
-    Skill_Level.Get_Player_Skill_Level()
+    Skill_Level.get_player_skill_level()
     player_ore_proficiency = 0
     percent_ore_proficiency = 30.0
     basic_levels = {1: 10, 2: 20, 3: 30, 4: 40, 5: 50}
