@@ -10,12 +10,17 @@ class Skill_Level():
 
     def get_player_skill_level():
         while True:
-            Skill_Level.player_skill_level = int(input("What is your total Ore Processing Skill level: "))
+            while True:
+                try:
+                    Skill_Level.player_skill_level = int(input("What is your total Ore Processing Skill level: "))
+                except ValueError:
+                    print('Please enter a valid number')
+                    continue
+                break
             if 0 < Skill_Level.player_skill_level < 16:
                 break
             print("Please enter a number from 1-15: ")
         return Skill_Level.player_skill_level
-
 
 class Ore_Processing(Skill_Level):
     Skill_Level.get_player_skill_level()
