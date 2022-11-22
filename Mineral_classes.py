@@ -1,24 +1,12 @@
-#!/usr/bin/env python 3
-# Mineral class and processing amounts
+#!/usr/bin/env python3
+# Mineral classes that show which ore that contain the mineral and the amount of the mineral in each of those ores
 
 class Mineral():
+    '''Base class to return a basic dictionary of each mineral that shows which ore is in'''
     ore_dict = {}
 
     def ore_dict_print(ore_dict):
         return ore_dict
-
-    def rich_dict_print(ore_dict):
-        rich_dict = {}
-        for key, value in ore_dict.items():
-            rich_dict[key] = round(value * 10, 2)
-        return rich_dict
-
-    def compressed_dict_print(ore_dict):
-        compressed_dict = {}
-        for key, value in ore_dict.items():
-            compressed_dict[key] = round(value * 100, 2)
-        return compressed_dict
-
 
 class Tritanium(Mineral):
     ore_dict= {"Veldspar": 1.25, "Scordite": .49, "Plagioclase": .15, "Omber": 1.8, "Kernite": .8, "Pyroxeres": 5.26,
@@ -58,32 +46,8 @@ class Morphite(Mineral):
     ore_dict= {"Mercoxit": 0.18, "Morphite": 0}
 
 
-Tritanium1 = Tritanium()
-Pyerite1 = Pyerite()
-Mexallon1 = Mexallon()
-Isogen1 = Isogen()
-Nocxium1 = Nocxium()
-Zydrine1 = Zydrine()
-Megacyte1= Megacyte()
-Morphite1 = Morphite()
-
-all_mineral_names = [Tritanium1.__class__.__name__, Pyerite1.__class__.__name__, Mexallon1.__class__.__name__, Isogen1.__class__.__name__,
-                     Nocxium1.__class__.__name__, Zydrine1.__class__.__name__, Megacyte1.__class__.__name__, Morphite1.__class__.__name__]
+# Dictionary with all the mineral classes to be able to iterate later on
 all_ores_dict_list = [Tritanium.ore_dict_print(Tritanium.ore_dict), Pyerite.ore_dict_print(Pyerite.ore_dict),
                       Mexallon.ore_dict_print(Mexallon.ore_dict), Isogen.ore_dict_print(Isogen.ore_dict),
                       Nocxium.ore_dict_print(Nocxium.ore_dict), Zydrine.ore_dict_print(Zydrine.ore_dict),
                       Megacyte.ore_dict_print(Megacyte.ore_dict), Morphite.ore_dict_print(Morphite.ore_dict)]
-all_rich_dict_list = [Tritanium.rich_dict_print(Tritanium.ore_dict), Pyerite.rich_dict_print(Pyerite.ore_dict),
-                      Mexallon.rich_dict_print(Mexallon.ore_dict), Isogen.rich_dict_print(Isogen.ore_dict),
-                      Nocxium.rich_dict_print(Nocxium.ore_dict), Zydrine.rich_dict_print(Zydrine.ore_dict),
-                      Megacyte.rich_dict_print(Megacyte.ore_dict), Morphite.rich_dict_print(Morphite.ore_dict)]
-all_compressed_dict_list = [Tritanium.compressed_dict_print(Tritanium.ore_dict), Pyerite.compressed_dict_print(Pyerite.ore_dict),
-                            Mexallon.compressed_dict_print(Mexallon.ore_dict), Isogen.compressed_dict_print(Isogen.ore_dict),
-                            Nocxium.compressed_dict_print(Nocxium.ore_dict), Zydrine.compressed_dict_print(Zydrine.ore_dict),
-                            Megacyte.compressed_dict_print(Megacyte.ore_dict), Morphite.compressed_dict_print(Morphite.ore_dict)]
-
-#print(mineral_name)
-#print(all_mineral_names)
-#print(all_ores_dict_list)
-#print(all_rich_dict_list)
-#print(all_compressed_dict_list)
