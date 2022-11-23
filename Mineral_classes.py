@@ -11,7 +11,7 @@ class Mineral():
 
 class Tritanium(Mineral):
     ore_dict = {"Veldspar": 1.25, "Scordite": .49, "Plagioclase": .15, "Omber": 1.8, "Kernite": .8, "Pyroxeres": 5.26,
-                "Dark Orchre": 2.88, "Spodumain": 59.1, "Hemorphite": 16.5, "Crokite": 116.4, "Arkonor": 26.4,
+                "Dark Ochre": 2.88, "Spodumain": 59.1, "Hemorphite": 16.5, "Crokite": 116.4, "Arkonor": 26.4,
                 "Tritanium": 0}
 
 
@@ -26,17 +26,17 @@ class Mexallon(Mineral):
 
 
 class Isogen(Mineral):
-    ore_dict = {"Omber": 0.17, "Kernite": .14, "Dark Orchre": 0.17, "Gneiss": 0.55,
+    ore_dict = {"Omber": 0.17, "Kernite": .14, "Dark Ochre": 0.17, "Gneiss": 0.55,
                 "Spodumain": .18, "Hemorphite": 0.48, "Hedbergite": 1.38, "Isogen": 0}
 
 
 class Nocxium(Mineral):
-    ore_dict = {"Pyroxeres": 0.09, "Dark Orchre": 0.13,  "Hemorphite": 0.04,
+    ore_dict = {"Pyroxeres": 0.09, "Dark Ochre": 0.13,  "Hemorphite": 0.04,
                 "Hedbergite": 0.03, "Jaspet": 0.14, "Crokite": 0.28, "Nocxium": 0}
 
 
 class Zydrine(Mineral):
-    ore_dict = {"Hemorphite": 0.15, "Hedbergite": 0.04,"Jaspet": 0.17, "Crokite": 0.29, "Bistot": 0.11, "Zydrine": 0}
+    ore_dict = {"Hemorphite": 0.15, "Hedbergite": 0.04, "Jaspet": 0.17, "Crokite": 0.29, "Bistot": 0.11, "Zydrine": 0}
 
 
 class Megacyte(Mineral):
