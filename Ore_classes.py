@@ -16,6 +16,8 @@ class Ores():
         for dict_list in Mineral_classes.all_ores_dict_list:
             for key, value in dict_list.items():
                 if ore_name.lower() == key.lower():
+                    print(ore_name)
+                    print(key)
                     if ore_name in dict_list:
                         mineral_name = list(dict_list)[-1]
                         ore_dict[mineral_name] = value/30
@@ -81,8 +83,8 @@ class Hedbergite(Ores):
     ore_dict = {}
 
 
-class Spoudmain(Ores):
-    ore_name = "Spoudmain"
+class Spodumain(Ores):
+    ore_name = "Spodumain"
     ore_dict = {}
 
 
@@ -129,7 +131,7 @@ def select_ore_type():
 def select_ore_name():
     '''Retrieves inout from user and askes for which ore they will be processing'''
     ore_list = ["veldspar", "scordite", "pyroxeres", "plagioclase", "omber", "jaspet", "hedbergite", "dark ochre",
-                "crokite", "arkonor", "kernite", "hemorphite", "spoudmain", "gneiss", "bistot", "mercoxit"]
+                "crokite", "arkonor", "kernite", "hemorphite", "spodumain", "gneiss", "bistot", "mercoxit"]
     while True:
         ore_name = input("What ore are you processing: ")
         if ore_name in ore_list:
@@ -226,13 +228,13 @@ def ore_mineral_info():
             return Gneiss.mineral_info_rich(Gneiss.ore_name, Gneiss.ore_dict)
         elif ore_type == "compressed":
             return Gneiss.mineral_info_compressed(Gneiss.ore_name, Gneiss.ore_dict)
-    elif ore_name == "spoudmain":
+    elif ore_name == "spodumain":
         if ore_type == "normal":
-            return Spoudmain.retrieve_mineral_info_normal(Spoudmain.ore_name, Spoudmain.ore_dict)
+            return Spodumain.retrieve_mineral_info_normal(Spodumain.ore_name, Spodumain.ore_dict)
         elif ore_type == "rich":
-            return Spoudmain.mineral_info_rich(Spoudmain.ore_name, Spoudmain.ore_dict)
+            return Spodumain.mineral_info_rich(Spodumain.ore_name, Spodumain.ore_dict)
         elif ore_type == "compressed":
-            return Spoudmain.mineral_info_compressed(Spoudmain.ore_name, Spoudmain.ore_dict)
+            return Spodumain.mineral_info_compressed(Spodumain.ore_name, Spodumain.ore_dict)
     elif ore_name == "hemorphite":
         if ore_type == "normal":
             return Hemorphite.retrieve_mineral_info_normal(Hemorphite.ore_name, Hemorphite.ore_dict)
