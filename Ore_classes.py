@@ -16,8 +16,6 @@ class Ores():
         for dict_list in Mineral_classes.all_ores_dict_list:
             for key, value in dict_list.items():
                 if ore_name.lower() == key.lower():
-                    print(ore_name)
-                    print(key)
                     if ore_name in dict_list:
                         mineral_name = list(dict_list)[-1]
                         ore_dict[mineral_name] = value/30
