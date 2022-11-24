@@ -116,6 +116,18 @@ class Mercoxit(Ores):
     ore_dict = {}
 
 
+def ore_amount():
+    '''User input to receive amount of ore that will be processed and ensures only an int is placed into function'''
+    while True:
+        try:
+            ore_amount = int(input("How much ore: "))
+            if ore_amount > 0:
+                break
+        except:
+            print("Please enter a valid number: ")
+    return ore_amount
+
+
 def select_ore_type():
     '''Retrieves input from user and askes for what type of ore the user will be processing, i.e Normal ore, Rich Ore, Compressed Ore'''
     while True:

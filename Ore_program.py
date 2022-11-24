@@ -12,7 +12,7 @@ def main():
         player_ore_stats = 0
         player_ore_stats = Ore_processing_skill.Ore_Processing.ore_stats()
         ore_dict = Ore_classes.ore_mineral_info()
-        ore_amount = int(input("How much ore: "))
+        ore_amount = Ore_classes.ore_amount()
 
         mineral_header = ["mineral", "amount"]
         mineral_key_list = []
