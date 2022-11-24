@@ -14,11 +14,6 @@ def main():
         ore_dict = Ore_classes.ore_mineral_info()
         ore_amount = Ore_classes.ore_amount()
 
-        mineral_header = ["mineral", "amount"]
-        mineral_key_list = []
-        mineral_value_list = []
-        mineral_total = []
-
 
         for key, value in ore_dict.items():
             ore_dict[key] = (value * player_ore_stats) * ore_amount
